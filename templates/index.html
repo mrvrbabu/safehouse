@@ -22,7 +22,7 @@
             Safe House
         </h1>
         <img class="img-fluid" id="safehouse" src="static/safehouse.jpg">
-        <h2 class="text-center mt-2 mb-4">About Safehouse</h2>
+        <h2 class="text-center mt-2 mb-4">About {{company_name}}</h2>
         <p class="lead">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
@@ -47,6 +47,17 @@
             consequat
             nisl vel pretium lectus. Quis imperdiet massa tincidunt nunc pulvinar sapien.
         </p>
+        <h2 class="text-center mt-2 mb-4"> Open Positions </h2>
+        <!-- <div>
+            {% for job in jobs %}
+            <div>{{job['title']}}</div>
+            {% endfor %}
+        </div> -->
+        <div>
+            {% for job in jobs %}
+            {% include 'jobs.html' %}
+            {% endfor %}
+        </div>
         <div class="text-center">
             <button class="btn btn-primary btn-lg"> Contact Us </button>
             <p> Copyright 2023, Safe House Inc</p>
