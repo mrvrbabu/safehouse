@@ -1,3 +1,5 @@
 flask
 python-dotenv
 gunicorn
+sqlalchemy==1.4.23
+psycopg2
